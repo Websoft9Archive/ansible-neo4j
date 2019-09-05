@@ -1,43 +1,47 @@
 # 参数
 
-## 组件及路径
+Neo4j 预装包包含 Neo4j 运行所需一序列支撑软件（简称为“组件”），下面列出主要组件名称、安装路径、配置文件地址、端口、版本等重要的信息。
 
-Neo4j部署包中不仅仅只有Neo4j本身，还包含一序列支持Neo4j运行所需的其他软件（这里称之为组件），下面列出主要组件名称、安装路径、配置文件地址等重要的信息：
+## 路径
 
 ### Neo4j
 
-Neo4j安装目录: /data/wwwroot/scratch/build
-Neo4j配置文件目录: /etc/neo4j/neo4j.conf
-数据存储目录: /var/lib/neo4j
+Neo4j Lib目录： */usr/share/neo4j/lib*  
+Neo4j 配置文件： */etc/neo4j/neo4j.conf*  
+Neo4j 数据目录： */var/lib/neo4j/data*  
+Neo4j 日志目录： */var/log/neo4j*  
+
+> 更多安装路径请查看 *neo4j.conf* 文件
 
 ### Java
-Java安装目录：/usr/lib/jvm
 
+Java Directory: */usr/lib/jvm*
 
 ### Nginx
-Nginx vhost configuration file: /etc/nginx/conf.d/default.conf
-Nginx configuaration file: /etc/nginx/nginx.conf
-Nginx logs file: /var/log/nginx/
+
+Nginx 虚拟主机配置文件：*/etc/nginx/conf.d/default.conf*  
+Nginx 主配置文件： */etc/nginx/nginx.conf*  
+Nginx 日志文件： */var/log/nginx/*
+
 
 ## 端口号
 
-下面是您在使用本镜像过程中，需要用到的端口号，请通过云控制台安全组进行设置
+下面是您在使用本镜像过程中，需要用到的端口号，请通过 [云控制台安全组](https://support.websoft9.com/docs/faq/zh/tech-instance.html)进行设置
 
 | 名称 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
-| HTTP | 80 | 通过http访问Neo4j | 必须 |
-| HTTPS | 443 | 通过https访问Neo4j | 可选 |
-| neo4j | 7687 | neo4j WebSocke | 必选 |
+| HTTP | 80 | 通过http访问 Neo4j Browser| 必须 |
+| HTTPS | 443 | 通过https访问 Neo4j Browser| 可选 |
+| Neo4j | 7687 | Neo4j Browser 远程连接 Neo4j database | 可选 |
 
 ## 版本号
 
-组件对应的基本版本号可以通过云市场商品页面查看，但部署到您的服务器之后，版本会有一定的升级，故更为精准的版本请通过在服务器上运行命令查看：
+组件版本号可以通过云市场商品页面查看。但部署到您的服务器之后，组件会自动进行更新导致版本号有一定的变化，故精准的版本号请通过在服务器上运行命令查看：
 
 ```shell
-Nginx version:
+# Java Version
+java --version
+
+# Nginx version:
 nginx -v
-
-OpenJDK:
-java -version
-
 ```
