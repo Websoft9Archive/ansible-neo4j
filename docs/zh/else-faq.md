@@ -6,43 +6,28 @@
 
 #### Neo4j browser 是什么？
 
-The Neo4j browser is a graphical user interface (GUI) that can be run through a web browser. The Neo4j browser can be used for adding data, running queries, creating relationships, and more. It also provides an easy way to visualise the data in the database.
+Neo4j浏览器是一个可以通过Web浏览器运行的图形用户界面（GUI）。 Neo4j浏览器可用于添加数据，运行查询，创建关系等。 它还提供了一种可视化数据库中数据的简便方法。
 
 #### Cypher 是什么？
 
 Cypher是操作Neo4j的语句，等同于SQL
 
-#### Neo4j数据库连接配置信息在哪里？
-
-数据库配置信息在Neo4j安装目录下的 *metabase.conf* 中，[查阅安装目录路径](/zh/stack-components.md#metabase)
-
 #### 如果没有域名是否可以部署 Neo4j？
 
 可以，访问`http://服务器公网IP` 即可
 
-#### 数据库 root 用户对应的密码是多少？
+#### 是否有可视化的数据库管理工具(GUI)？
 
-密码存放在服务器相关文件中：`/credentials/password.txt`
+有，内置 Neo4j Browser，访问地址：*http://服务器公网IP* 即可
 
-#### 是否有可视化的数据库管理工具？
+#### 如何禁止Neo4j Browser 访问？
 
-有，内置phpMyAdmin，访问地址：http://服务器公网IP:9090
-
-#### 如何禁止phpMyAdmin访问？
-
-关闭服务器安全组的9090端口即可禁止
+关闭服务器安全组的 80 端口即可禁止
 
 #### 是否可以修改Neo4j的源码路径？
 
-可以，通过修改 [Nginx 虚拟主机配置文件](/zh/stack-components.md)中相关参数
+不可以
 
-#### 如何修改上传的文件权限?
-
-```shell
-chown -R nginx.nginx /data/wwwroot/metabase
-find /data/wwwroot/metabase -type d -exec chmod 750 {} \;
-find /data/wwwroot/metabase -type f -exec chmod 640 {} \;
-```
 #### 部署和安装有什么区别？
 
 部署是将一序列软件按照不同顺序，先后安装并配置到服务器的过程，是一个复杂的系统工程。  

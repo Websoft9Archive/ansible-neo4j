@@ -6,39 +6,24 @@ The Neo4j browser is a graphical user interface (GUI) that can be run through a 
 
 #### Cypher？
 
-#### Where is the database connection configuration of Neo4j?
-
-Database configuration information in *metabase.conf* in the Neo4j installation directory, [refer to the installation directory](/stack-components.md#metabase)
+Cypher is Neo4j’s graph query language that allows users to store and retrieve data from the graph database. Neo4j wanted to make querying graph data easy to learn, understand, and use for everyone, but also incorporate the power and functionality of other standard data access languages.
 
 #### If there is no domain name, can I deploy Neo4j?
 
 Yes, visit Neo4j by *http://Internet IP*
 
-#### What is the password for the database root user?
-
-The password is stored in the server related file: `/credentials/password.txt`
-
 #### Is there a web-base GUI database management tools?
 
-Yes, phpMyAdmin is on it, visit by http://Internet IP:9090
+Yes, Neo4j Browser is on it, visit by *http://Internet IP*
 
-#### How to disable phpMyAdmin access?
+#### How to disable Neo4j Browser access?
 
-Disable port 9090 of the server security group
+Disable port 80 of the server security group
 
 #### Is it possible to modify the source path of Neo4j?
 
-Yes, modify it by [Nginx vhost configuration file](/stack-components.md)
+No
 
-#### How to change the permissions of filesytem?
-
-Change owner(group) or permissions like below:
-
-```shell
-chown -R nginx.nginx /data/wwwroot
-find /data/wwwroot -type d -exec chmod 750 {} \;
-find /data/wwwroot -type f -exec chmod 640 {} \;
-```
 #### What's the difference between Deployment and Installation?
 
 - Deployment is a process of installing and configuring a sequence of software in sequence in a different order, which is a complex system engineering.  

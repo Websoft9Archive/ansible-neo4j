@@ -24,18 +24,4 @@ yum update -y
 
 ## Neo4j升级
 
-Neo4j有升级包的时候，后台会及时给出提示。参考下面的步骤完成升级：
-
-1. Neo4j后台->设置->升级，如果有新的升级包，系统会给与提示
-![Neo4j升级提示](https://libs.websoft9.com/Websoft9/DocsPicture/zh/metabase/metabase-updatereminder-websoft9.png)
-
-2. 点击“更新”按钮后，系统会跳转到Neo4j官方的安装页面。
-3. 我们提供的部署包采用的是jar包安装模式，因此在安装页面我们选择“Custom install”模式，
-![Neo4j升级提示](https://libs.websoft9.com/Websoft9/DocsPicture/zh/metabase/metabase-updatedl-websoft9.png)
-
-3. 下载Neo4j.jar包后，上传到服务器 `/data/wwwroot/metabase`, 覆盖已有的同名文件
-![Neo4j升级提示](https://libs.websoft9.com/Websoft9/DocsPicture/zh/metabase/metabase-updatereplace-websoft9.png)
-
-4. 重新加载Neo4j，升级成功
-
-> [官方文档](https://neo4j.com/docs/operations-manual/current/upgrade/)
+Neo4j 升级有一定的复杂性，请参考[官方升级文档](https://neo4j.com/docs/operations-manual/current/upgrade/)

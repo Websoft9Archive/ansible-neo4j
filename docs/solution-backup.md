@@ -37,21 +37,5 @@ Different Cloud Platform's snapshot settings slightly different, refer to [Cloud
 
 ### Manual backup for application
 
-Manual backup for application is based on the **Exporting source code and database of application** to achieve a minimized backup scheme.
-
-```
-- Backup scope: Source code and database of application
-- Backup effect: Good
-- Backup frequency: You can operate when you need
-- Recovery methond: Import
-- Skill requirement: Easy 
-- Automation: manual
-```
-The general manual backup operation steps are as follows:
-
-1. Just compression and download the entire */data/wwwroot/metabase* directory by SFTP 
-2. Export Neo4j's database by [phpMyAdmin](/zh/admin-mysql.md)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/phpmyadmin/phpmyadmin-export-websoft9.png)
-3. Put the source code file and database file in the same folder, named according to the date
-4. Backup completed
+Please refer to [Neo4j's Backup Docs](https://neo4j.com/docs/operations-manual/current/backup/)
 

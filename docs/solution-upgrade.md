@@ -26,17 +26,4 @@ yum update -y
 
 ## Neo4j Upgrade
 
-Follow the steps below to complete the upgrade:
-
-1. Log in Neo4j, go to Admin->Setting->Updates, the system will give you a reminder if there is a new upgrade package
-![Neo4j updates reminder](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-updatereminder-websoft9.png)
-
-2. Click the **Upgrade** button, go to the [Neo4j Install](https://metabase.com/start/) page
-
-3. The deployment package we provide is in the jar package installation mode, so on the installation page we select the **Custom install** mode.
-![Neo4j install](https://libs.websoft9.com/Websoft9/DocsPicture/zh/metabase/metabase-updatedl-websoft9.png)
-
-3. Download teh Neo4j.jar pakage and upload to your instance's directory `/data/wwwroot/metabase`
-![Neo4j upload](https://libs.websoft9.com/Websoft9/DocsPicture/zh/metabase/metabase-updatereplace-websoft9.png)
-
-4. Overwrite existing files and reload the Neo4j
+Neo4j Upgrade is not easy, please refer to [Neo4j's Upgrade Docs](https://neo4j.com/docs/operations-manual/current/upgrade/)

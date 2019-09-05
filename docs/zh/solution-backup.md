@@ -39,24 +39,8 @@ sidebarDepth: 3
 
 不同云平台的自动备份方案有一定的差异，详情参考 [云平台备份方案](https://support.websoft9.com/docs/faq/zh/tech-instance.html)
 
-### 程序手工备份
+### Neo4j 官方方案
 
-程序手工本地备份是通过**下载应用程序源码和导出数据库文件**实现最小化的备份方案。
+请参考 [Neo4j's Backup Docs](https://neo4j.com/docs/operations-manual/current/backup/)
 
-下面以列表的方式介绍这种备份：
-```
-- 备份范围: 数据库和应用程序
-- 备份效果: 一般
-- 备份频率: 一周最低1次，备份保留30天
-- 恢复方式: 重新导入
-- 技能要求：非常容易
-- 自动化：无
-```
-通用的手动备份操作步骤如下：
-
-1. 通过WinSCP将网站目录（*/data/wwwroot/metabase*）**压缩后**再完整的下载到本地
-2. 通过phpMyAdmin导出Neo4j数据库
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-export-websoft9.png)
-3. 将程序文件和数据库文件放到同一个文件夹，根据日期命名
-4. 备份工作完成
 
