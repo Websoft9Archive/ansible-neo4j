@@ -13,7 +13,7 @@
 1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 默认进入 Neo4j Browser 的连接页面
 ![Neo4j Browser](https://libs.websoft9.com/Websoft9/DocsPicture/en/neo4j/neo4j-connectfirst-websoft9.png)
 
-2. 输入正确的用户名和密码（[获取](/zh/stack-accounts.md)），系统会强制要求修改密码
+2. 输入[默认用户名和密码](/zh/stack-accounts.md)后，系统会强制要求修改密码
 ![修改Neo4j密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/neo4j/neo4j-snewpw-websoft9.png)
 
 4. 修改新密码后，系统登录到控制台，初始化安装完成

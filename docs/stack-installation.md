@@ -13,7 +13,7 @@ If you have completed the Neo4j deployment on Cloud Platform, the following step
 1. Using local Chrome or Firefox to visit the URL *http://domain name* or *http://Internet IP*, you will enter the register interface of Neo4j
 ![Neo4j Browser](https://libs.websoft9.com/Websoft9/DocsPicture/en/neo4j/neo4j-connectfirst-websoft9.png)
 
-2. Input the correct username and password([Get it](/zh/stack-accounts.md), then the system will force a password change.
+2. Input the [default username and password](/stack-accounts.md), then the system will force a password change.
 ![modify Neo4j password](https://libs.websoft9.com/Websoft9/DocsPicture/en/neo4j/neo4j-snewpw-websoft9.png)
 
 4. After modifying the new password, the system logs in to the console and initializes the installation.

@@ -2,7 +2,7 @@
 
 **Deployment is to copy the Neo4j pre-packaged online to your Cloud Server**. For example, after the user subscribe Neo4j on the Cloud Platform, the Platform will automatically copy the Neo4j to the corresponding Cloud Server.
 
-- If Neo4j has been deployed, go to [Initial Installation](/zh/stack-installation.md) to complete the operation.
+- If Neo4j has been deployed, go to [Initial Installation](/stack-installation.md) to complete the operation.
 - If Neo4j is not deployed, you need to deploy Neo4j to your cloud server first.
 
 We offer two deployment Neo4j scenarios (the deployment results are the same):
