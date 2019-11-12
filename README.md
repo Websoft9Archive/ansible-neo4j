@@ -13,13 +13,13 @@
 
 ## 组件
 
-包含的核心组件为：Neo4j Server, Java, Nginx,
+包含的核心组件为：Neo4j Server, Java, Nginx
 
 更多请见[参数表](/docs/zh/stack-components.md)
 
 ## 本项目安装的是 Neo4j 最新版吗？
 
-本 Graylog 项目采用官方提供的 Omnibus package 安装包，Neo4j 官方会定期维护 Omnibus package 中 Neo4j 的版本，即每一次安装均可保证为 Neo4j 官方发布的最新稳定版。
+本 Graylog 项目采用官方提供的在线 deb 安装包，Neo4j 官方会定期维护Neo4j 的版本，即每一次安装均可保证为 Neo4j 官方发布的最新稳定版。
 
 ## 安装指南
 
