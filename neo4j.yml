@@ -1,7 +1,7 @@
   
 # # 服务器前置任务(ubuntu使用)
 - name: Pre_tasks of neo4j
-  hosts: neo4j
+  hosts: all
   become: yes
   become_method: sudo
   gather_facts: False
@@ -13,7 +13,7 @@
 # # 核心任务
 
 - name: neo4j
-  hosts: neo4j
+  hosts: all
   become: yes
   become_method: sudo
 
