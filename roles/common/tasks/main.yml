@@ -1,4 +1,5 @@
 ---
+# - debug: msg="Hello World"
 
 # Centos 更新 安装基础软件工具等操作
 - block:
@@ -6,12 +7,14 @@
     yum: name=* state=latest
 
   - name: Install EPEL
-    template:
-      src: '{{item.src}}'
-      dest: '{{item.dest}}'
-    with_items:
-      - {src: epel.repo.jinja2,dest: /etc/yum.repos.d/epel.repo}
-      - {src: 'RPM-GPG-KEY-EPEL-{{ansible_distribution_version}}',dest: /etc/pki/rpm-gpg/}
+    yum:
+      name: epel-release
+    # template:
+    #   src: '{{item.src}}'
+    #   dest: '{{item.dest}}'
+    # with_items:
+    #   - {src: epel.repo.jinja2,dest: /etc/yum.repos.d/epel.repo}
+    #   - {src: 'RPM-GPG-KEY-EPEL-{{ansible_distribution_version}}',dest: /etc/pki/rpm-gpg/}
 
 
   - name: Disable SELinux
@@ -20,10 +23,11 @@
 
   - name:  temporarily disable Selinux
     shell: setenforce 0 
+    ignore_errors: yes
 
   - name: Install Common Software
     yum: 
-      name: [yum-utils,wget,openssl,unzip,bzip2,expect,at,vim, screen,pwgen,git, htop, yum-cron,ImageMagick, goaccess,MySQL-python,python-pip]
+      name: [mosh,yum-utils,wget,openssl,unzip,bzip2,expect,at,vim, screen,pwgen,git, htop, yum-cron,ImageMagick, goaccess,MySQL-python,python-pip,inotify-tools]
       state: installed
     
   - name: Configuration yum-cron
@@ -46,7 +50,7 @@
 
   - name: Install Common Software
     apt: 
-      name: [curl,gnupg2,ca-certificates,lsb-release,wget,openssl,unzip,bzip2,expect,at,vim,screen,pwgen,git,htop,imagemagick,goaccess,python3-mysqldb,python-mysqldb,python-pip,python3-pip,unattended-upgrades,python3-pexpect,python-pexpect]
+      name: [mosh,curl,gnupg2,ca-certificates,lsb-release,wget,openssl,unzip,bzip2,expect,at,vim,screen,pwgen,git,htop,imagemagick,goaccess,python3-mysqldb,python-mysqldb,python-pip,python3-pip,unattended-upgrades,python3-pexpect,python-pexpect]
       state: latest
       force_apt_get: True
       allow_unauthenticated: yes
@@ -101,7 +105,7 @@
 - name: Fix No space left on device
   sysctl:
     name: fs.inotify.max_user_watches
-    value: "262144"
+    value: "8192000"
 
 - block:
   - name: AWS Configure
@@ -128,3 +132,12 @@
       enabled: yes
 
   when: cloud == 'aws' and ansible_distribution == 'Centos'
+
+- name: Create Dir
+  file:
+    path: '/data/{{item}}'
+    state: directory
+  with_items:
+    - logs
+    - config
+    - cert
