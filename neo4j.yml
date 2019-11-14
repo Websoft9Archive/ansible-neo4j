@@ -20,3 +20,4 @@
     - { role: common, tags: "common"}  
     - { role: nginx, tags: "nginx"}
     - { role: neo4j, tags: "neo4j"}
+    - { role: end, tags: "end"}
