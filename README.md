@@ -19,7 +19,7 @@
 
 ## 本项目安装的是 Neo4j 最新版吗？
 
-本 Graylog 项目采用官方提供的在线 deb 安装包，Neo4j 官方会定期维护Neo4j 的版本，即每一次安装均可保证为 Neo4j 官方发布的最新稳定版。
+本 Graylog 项目采用官方提供的在线 deb 安装包，Neo4j 官方会定期维护Neo4j 的版本，即每一次安装均可保证为 Neo4j 官方发布的最新稳定版([查看版本号](https://neo4j.com/download-center/#community))。
 
 ## 安装指南
 

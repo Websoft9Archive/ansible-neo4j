@@ -1,6 +1,5 @@
-  
-# # 服务器前置任务(ubuntu使用)
-- name: Pre_tasks of neo4j
+# 服务器前置任务(ubuntu使用)
+- name: neo4j
   hosts: all
   become: yes
   become_method: sudo
