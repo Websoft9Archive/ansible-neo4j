@@ -1,0 +1,36 @@
+- name: Add java8 repo
+  apt_repository:
+    repo: 'ppa:openjdk-r/ppa'
+
+- name: Add neo4j repository key
+  apt_key:
+    url: https://debian.neo4j.org/neotechnology.gpg.key
+
+- name: Add neo4j repository
+  apt_repository:
+    repo: deb https://debian.neo4j.org/repo stable/
+
+- name: Install neo4j
+  apt:
+    name: neo4j
+    update_cache: yes
+
+- name: setting neo4j
+  lineinfile:
+    dest: /etc/neo4j/neo4j.conf
+    regexp: '#dbms.connectors.default_listen_address=0.0.0.0'
+    line: "dbms.connectors.default_listen_address=0.0.0.0"
+    state: present
+
+- name: restart neo4j
+  service: name=neo4j state=restarted enabled=yes
+
+- name: set reverse porxy
+  copy: 
+    src: default
+    dest: /etc/nginx/conf.d/default.conf
+
+- name: restart nginx
+  service: name=nginx state=restarted enabled=yes
+
+  
