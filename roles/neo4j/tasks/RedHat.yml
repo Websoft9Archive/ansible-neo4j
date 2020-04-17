@@ -1,7 +1,8 @@
 - name: Add Neo4j repositories
   yum_repository:
-    name: Neo4j RPM Repository
+    name: neo4j
     file: neo4j
+    description: Neo4j RPM Repository
     baseurl: https://yum.neo4j.com/stable
     gpgcheck: yes
     gpgkey: https://debian.neo4j.com/neotechnology.gpg.key
