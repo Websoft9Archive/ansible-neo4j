@@ -2,8 +2,8 @@
 
 组件名称：Neo4j  
 安装文档：https://neo4j.com/docs/operations-manual/current/installation/linux/rpm/#linux-rpm-install  
-配置文档:  https://neo4j.com/docs/operations-manual/4.0/configuration/connectors/  
-支持平台： Debian家族 | RHEL家族 | Windows | MacOS | Docker  
+配置文档: https://neo4j.com/docs/operations-manual/4.0/configuration/connectors/  
+支持平台：Debian家族 | RHEL家族 | Windows | MacOS | Docker  
 
 责任人：zengxiangchuan
 
