@@ -3,6 +3,6 @@
   debug:
     var: check_neo4j_version.stdout
   
-- name: check_erlang_version
+- name: check_java_version
   debug:
-    var: check_erlang_version.stdout
+    var: check_java_version.stdout
