@@ -79,6 +79,11 @@ systemctl enable neo4j
 
 本项目安装后自动生成：neo4j 服务
 
+## 随机密码
+
+默认账号密码为neo4j/neo4j  
+官方密码方案为：https://neo4j.com/docs/operations-manual/current/configuration/set-initial-password/  
+
 
 ## 版本号
 
