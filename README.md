@@ -10,7 +10,7 @@
 
 | 条件       | 详情       | 备注  |
 | ------------ | ------------ | ----- |
-| 操作系统       | Ubuntu18.04      |  可选  |
+| 操作系统       | Ubuntu18.04,CentOS7.x,AmazonLinux2      |  可选  |
 | 公有云| AWS, Azure, 阿里云, 华为云, 腾讯云 | 可选 |
 | 私有云|  KVM, VMware, VirtualBox, OpenStack | 可选 |
 | 服务器配置 | 最低2核4G，安装时所需的带宽不低于10M |  建议采用按量100M带宽 |
@@ -25,7 +25,7 @@
 
 ## 本项目安装的是 Neo4j 最新版吗？
 
-本项目采用官方提供的在线 deb 安装包，Neo4j 官方会定期维护Neo4j 的版本，即每一次安装均可保证为 Neo4j 官方发布的最新稳定版([查看版本号](https://neo4j.com/download-center/#community))。
+本项目采用官方提供的在线 deb/rpm 安装包，Neo4j 官方会定期维护Neo4j 的版本，即每一次安装均可保证为 Neo4j 官方发布的最新稳定版([查看版本号](https://neo4j.com/download-center/#community))。
 
 我们会定期检查安装脚本 URL 地址的准确性，以保证用户可以顺利安装。
 
