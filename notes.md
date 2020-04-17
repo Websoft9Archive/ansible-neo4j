@@ -1,4 +1,4 @@
-#Neo4j Notes
+# Neo4j Notes
 
 组件名称：Neo4j
 安装文档：https://neo4j.com/docs/operations-manual/current/installation/linux/rpm/#linux-rpm-install  
