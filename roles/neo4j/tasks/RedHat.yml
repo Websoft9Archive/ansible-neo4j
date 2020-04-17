@@ -6,6 +6,7 @@
     baseurl: https://yum.neo4j.com/stable
     gpgcheck: yes
     gpgkey: https://debian.neo4j.com/neotechnology.gpg.key
+    enabled: yes
 
 - name: Install java adapter for Neo4j
   shell: yum install https://dist.neo4j.org/neo4j-java11-adapter.noarch.rpm
