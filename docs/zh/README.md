@@ -4,9 +4,11 @@ home: false
 
 # 关于
 
-本文档由 [Websoft9](https://www.websoft9.com/) 公司提供，用于指导用户学习 Neo4j 的安装部署与基本运维技术，包括：Neo4j部署、初始化安装、环境配置、HTTPS、SMTP、备份升级和连接云服务器操作等基本操作。
+本文档由 [Websoft9](https://www.websoft9.com/) 公司提供，用于指导用户学习 Neo4j Community Edition 的安装部署与基本运维技术，包括：Neo4j部署、初始化安装、环境配置、HTTPS、SMTP、备份升级和连接云服务器操作等基本操作。
 
 [Neo4j](https://neo4j.com/) 是一个高性能的,NOSQL图形数据库，它将结构化数据存储在网络上而不是表中。它是一个嵌入式的、基于磁盘的、具备完全的事务特性的Java持久化引擎，但是它将结构化数据存储在网络(从数学角度叫做图)上而不是表中。Neo4j也可以被看作是一个高性能的图引擎，该引擎具有成熟数据库的所有特性。
+
+Neo4j 官方提供了三个版本：Neo4j Community Edition, Neo4j Enterprise Edition, Neo4j Desktop
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/neo4j/neo4j-console-websoft9.png)
 

@@ -4,7 +4,7 @@ home: false
 
 # Overview
 
-This documentation is provided by [Websoft9](https://www.websoft9.com/), it can help users to acquire skills of Neo4j Deployment, Installation, Configuration, HTTPS, SMTP, Backup, Upgrade, Connect Instance and more.
+This documentation is provided by [Websoft9](https://www.websoft9.com/), it can help users to acquire skills of Neo4j Community Edition Deployment, Installation, Configuration, HTTPS, SMTP, Backup, Upgrade, Connect Instance and more.
 
 [Neo4j](https://neo4j.com/) is the world’s leading Graph Database. It is a high performance graph store with all the features expected of a mature and robust database, like a friendly query language and ACID transactions. The programmer works with a flexible network structure of nodes and relationships rather than static tables — yet enjoys all the benefits of enterprise-quality database. For many applications, Neo4j offers orders of magnitude performance benefits compared to relational DBs.
 
