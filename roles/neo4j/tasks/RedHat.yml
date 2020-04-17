@@ -1,0 +1,25 @@
+- name: Add Neo4j repositories
+  yum_repository:
+    name: Neo4j RPM Repository
+    file: neo4j
+    baseurl: https://yum.neo4j.com/stable
+    gpgcheck: yes
+    gpgkey: https://debian.neo4j.com/neotechnology.gpg.key
+
+- name: Install java adapter for Neo4j
+  shell: sudo yum install https://dist.neo4j.org/neo4j-java11-adapter.noarch.rpm
+
+- name: Install Neo4j
+  yum:
+    name: neo4j
+    state: latest
+
+- name: setting neo4j
+  lineinfile:
+    dest: /etc/neo4j/neo4j.conf
+    regexp: '#dbms.connectors.default_listen_address=0.0.0.0'
+    line: "dbms.connectors.default_listen_address=0.0.0.0"
+    state: present
+
+- name: Enable and Restart neo4j
+  service: name=neo4j state=restarted enabled=yes
