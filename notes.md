@@ -48,10 +48,12 @@ yum install neo4j
 安装完成后，注意如下配置：
 
 #修改配置文件
+```
 dbms.connector.http.enabled=true(默认为false)
 dbms.connector.http.listen_address=:7474(http协议)
 dbms.connector.http.listen_address=:7473(https协议)
 dbms.connector.bolt.listen_address=0.0.0.0:端口号(自定义端口)
+```
 
 #启动与开机自启
 ```
