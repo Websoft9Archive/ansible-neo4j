@@ -1,6 +1,19 @@
+# install
 - name: Install this role on {{ansible_os_family}}
   include: "{{ansible_os_family}}.yml"
 
+# configure
+- name: setting neo4j
+  lineinfile:
+    dest: /etc/neo4j/neo4j.conf
+    regexp: '#dbms.connectors.default_listen_address=0.0.0.0'
+    line: "dbms.connectors.default_listen_address=0.0.0.0"
+    state: present
+
+- name: restart neo4j
+  service: name=neo4j state=restarted enabled=yes
+
+# print version
 - block:
   - name: Check Neo4j Version
     shell: neo4j version
