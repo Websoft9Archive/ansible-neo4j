@@ -1,9 +1,9 @@
 #Neo4j Notes
 
 组件名称：Neo4j
-安装文档：https://neo4j.com/docs/operations-manual/current/installation/linux/rpm/#linux-rpm-install
-配置文档:  https://neo4j.com/docs/operations-manual/4.0/configuration/connectors/
-支持平台： Debian家族 | RHEL家族 | Windows | MacOS|Docker
+安装文档：https://neo4j.com/docs/operations-manual/current/installation/linux/rpm/#linux-rpm-install  
+配置文档:  https://neo4j.com/docs/operations-manual/4.0/configuration/connectors/  
+支持平台： Debian家族 | RHEL家族 | Windows | MacOS | Docker  
 
 责任人：zengxiangchuan
 
@@ -22,10 +22,11 @@ Neo4j是一个高性能的，NOSQL数据库，它将结构化数据存储在网�
 
 据官网文档说明,neo4j数据库有专用软件仓库,不建议用第三方软件仓库或者自行下载依赖软件。
 
-
 下面基于不同的安装平台，分别进行安装说明。
 
 ### CentOS
+
+默认包中自带openjdk11，如果需要在AmazonLinux上使用需额外安装OpenJDK，如果需要使用Oracle JDK，也需额外安装
 
 ```shell
 # 安装公钥并安装neo4j软件仓库
@@ -38,13 +39,14 @@ enabled=1
 gpgcheck=1
 EOF
 
-#安装适配器
-sudo yum install https://dist.neo4j.org/neo4j-java11-adapter.noarch.rpm
-
 # 安装Neo4j
-yum install neo4j-4.0.3   neo4j-enterprise-4.0.3
+yum install neo4j
 
 ```
+## 配置
+
+安装完成后，注意如下配置：
+
 #修改配置文件
 dbms.connector.http.enabled=true(默认为false)
 dbms.connector.http.listen_address=:7474(http协议)
@@ -53,13 +55,14 @@ dbms.connector.bolt.listen_address=0.0.0.0:端口号(自定义端口)
 
 #启动与开机自启
 ```
-systemctl start neo4j.service
-systemctl enable neo4j.service
+systemctl start neo4j
+systemctl enable neo4j
 ```
 
-##路径
-```shell
-  neo4j   console
+## 路径
+
+运行命令`neo4j   console`，获取如下路径信息：
+
 ```
   程序路径:         /var/lib/neo4j
   配置文件路径:   /etc/neo4j
@@ -68,18 +71,12 @@ systemctl enable neo4j.service
   数据路径:         /var/lib/neo4j/data
   证书路径:       /var/lib/neo4j/certificates
   启动路径:          /var/run/neo4j
+```
 
 ## 服务
 
 本项目安装后自动生成：neo4j 服务
 
-备注：如果开机没有服务，程序无法运行的情况下，需要自行编写服务
-
-服务的模板如下：
-
-```
-
-```
 
 ## 版本号
 
@@ -116,7 +113,6 @@ neo4j-driver,  py2neo,  neo4jrestclient   建议用官方支持的是neo4j-drive
 #### java 11 不兼容
 
 Oracle和OpenJDK为Java 11提供了不兼容的RPM软件包。我们提供了针对Oracle Java 11的适配器，该适配器必须在Neo4j之前安装。
-
 
 ## 日志
 
