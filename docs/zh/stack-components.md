@@ -6,10 +6,15 @@ Neo4j 预装包包含 Neo4j 运行所需一序列支撑软件（简称为“组�
 
 ### Neo4j
 
-Neo4j Lib目录： */usr/share/neo4j/lib*  
-Neo4j 配置文件： */etc/neo4j/neo4j.conf*  
-Neo4j 数据目录： */var/lib/neo4j/data*  
-Neo4j 日志目录： */var/log/neo4j*  
+运行 `neo4j console` 命令查看安装相关的路径：
+
+Neo4j 程序路径：*/var/lib/neo4j*  
+Neo4j 配置文件路径：*/etc/neo4j*  
+Neo4j 日志路径：*/var/log/neo4j*  
+Neo4j 插件路径：*/var/lib/neo4j/plugins*  
+Neo4j 数据路径：*/var/lib/neo4j/data*  
+Neo4j 证书路径：*/var/lib/neo4j/certificates*  
+Neo4j 启动路径：*/var/run/neo4j*  
 
 > 更多安装路径请查看 *neo4j.conf* 文件
 

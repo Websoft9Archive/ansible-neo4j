@@ -1,0 +1,8 @@
+    
+- name: check_neo4j_version
+  debug:
+    var: check_neo4j_version.stdout
+  
+- name: check_erlang_version
+  debug:
+    var: check_erlang_version.stdout

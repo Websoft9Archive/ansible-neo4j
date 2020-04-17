@@ -1,2 +1,13 @@
 - name: Install this role on {{ansible_os_family}}
   include: "{{ansible_os_family}}.yml"
+
+- block:
+  - name: Check Neo4j Version
+    shell: neo4j version
+    register: check_neo4j_version
+    notify: check_neo4j_version
+
+  - name: Check Java Version
+    shell: java -version
+    register: check_java_version
+    notify: check_java_version
