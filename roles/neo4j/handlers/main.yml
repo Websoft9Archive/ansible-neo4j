@@ -1,8 +1,1 @@
-    
-- name: check_neo4j_version
-  debug:
-    var: check_neo4j_version.stdout
-  
-- name: check_java_version
-  debug:
-    var: check_java_version.stdout
+
