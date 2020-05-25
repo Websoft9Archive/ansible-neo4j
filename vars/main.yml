@@ -3,11 +3,7 @@ nginx_reverse_proxy_port: "7474"
 
 init_service_before: "neo4j"
 
-init_application:
+init_db: 
   neo4j:
-    random_password: True
-    default_account: neo4j
-    default_password: neo4j
-    random_password_method: 
-      - rm -rf /var/lib/neo4j/data/dbms/auth.ini
-      - neo4j-admin set-initial-password $new_password --require-password-change
+    user: neo4j
+    password: "neo4j"
