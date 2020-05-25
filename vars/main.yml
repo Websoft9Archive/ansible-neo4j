@@ -1,2 +1,12 @@
 jdk_version: "11" 
 nginx_reverse_proxy_port: "7474"
+
+init_service_before: "neo4j"
+
+init_application:
+  neo4j:
+    random_password: True
+    default_account: neo4j
+    default_password: neo4j
+    random_password_method: 
+      - grafana-cli admin reset-admin-password $new_password
