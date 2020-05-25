@@ -10,6 +10,9 @@
 - src: https://github.com/websoft9dev/role_jdk
   version: master
 
+- src: https://github.com/websoft9dev/role_init_password
+  version: master
+
 - src: https://github.com/websoft9dev/role_preend
   version: master
 
