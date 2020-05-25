@@ -9,4 +9,4 @@ init_application:
     default_account: neo4j
     default_password: neo4j
     random_password_method: 
-      - grafana-cli admin reset-admin-password $new_password
+      - bin/neo4j-admin set-initial-password $new_password --require-password-change
