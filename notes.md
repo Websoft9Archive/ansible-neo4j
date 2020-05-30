@@ -81,8 +81,16 @@ systemctl enable neo4j
 
 ## 随机密码
 
-默认账号密码为neo4j/neo4j  
-官方密码方案为：https://neo4j.com/docs/operations-manual/current/configuration/set-initial-password/  
+开始输入cypher-shell，进入交互式命令，即可更改密码
+
+```
+#cypher-shell
+username: neo4j
+password: *****
+Password change required
+new password: ******
+
+```
 
 
 ## 版本号
