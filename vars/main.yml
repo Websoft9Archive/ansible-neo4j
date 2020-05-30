@@ -1,8 +1,6 @@
 jdk_version: "11" 
 nginx_reverse_proxy_port: "7474"
 
-init_service_before: "neo4j"
-
 init_db: 
   neo4j:
     admin: neo4j
