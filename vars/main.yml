@@ -5,5 +5,5 @@ init_service_before: "neo4j"
 
 init_db: 
   neo4j:
-    user: neo4j
+    admin: neo4j
     password: "neo4j"
