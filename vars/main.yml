@@ -1,6 +1,6 @@
 
 common_os_support: ["CentOS", "Ubuntu", "Amazon"]
-dk_distribution: "jdk"
+jdk_distribution: "jdk"
 jdk_version: "11" 
 
 nginx_certbot: True
