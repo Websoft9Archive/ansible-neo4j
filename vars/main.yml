@@ -1,7 +1,7 @@
 
 common_os_support: ["CentOS", "Ubuntu", "Amazon"]
 jdk_distribution: "jdk"
-jdk_version: "8" 
+jdk_version: "11" 
 
 nginx_certbot: True
 nginx_reverse_proxy_port: "7474"
