@@ -17,6 +17,3 @@
 - block:
   - name: Check Neo4j Version
     shell: sudo sh -c "neo4j version 1>> /data/logs/install_version.txt"
-
-  - name: Check Java Version
-    shell: sudo sh -c "java -version 2>> /data/logs/install_version.txt"
