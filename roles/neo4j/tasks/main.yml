@@ -17,7 +17,10 @@
   template:
     src: neo4j.sh
     dest: /credentials/neo4j.sh
-
+    
+- name: excute init password
+  script: /credentials/neo4j.sh
+  
 # print version
 - block:
   - name: Check Neo4j Version
