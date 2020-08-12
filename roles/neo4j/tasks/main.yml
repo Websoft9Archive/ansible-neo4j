@@ -13,6 +13,11 @@
 - name: restart neo4j
   service: name=neo4j state=restarted enabled=yes
 
+- name: Copy init_password
+  template:
+    src: neo4j.sh
+    dest: /credentials/neo4j.sh
+
 # print version
 - block:
   - name: Check Neo4j Version
