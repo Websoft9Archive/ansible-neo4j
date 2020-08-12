@@ -1,3 +1,4 @@
+#!/bin/bash
 echo " 
 neo4j
 neo4j 
