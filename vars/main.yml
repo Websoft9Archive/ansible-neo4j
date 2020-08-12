@@ -9,4 +9,4 @@ nginx_reverse_proxy_port: "7474"
 init_db: 
   neo4j:
     admin: neo4j
-    password: "neo4j"
+    password: "neo4j123"
