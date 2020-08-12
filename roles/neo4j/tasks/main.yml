@@ -16,10 +16,10 @@
 - name: Copy init_password
   template:
     src: neo4j.sh
-    dest: /credentials/neo4j.sh
+    dest: /data/config/neo4j.sh
     
 - name: excute init password
-  script: /credentials/neo4j.sh
+  script: /data/config/neo4j.sh
   
 # print version
 - block:
