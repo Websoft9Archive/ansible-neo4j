@@ -23,6 +23,8 @@ Neo4j 域名绑定操作步骤：
 
 ## CLI
 
+### Cypher Shell
+
 Neo4j 提供了默认的命令行工具[Cypher Shell](https://neo4j.com/docs/operations-manual/current/tools/cypher-shell/)，Cypher Shell用于运行查询和执行管理任务。它通过加密的二进制协议Bolt进行通信。
 
 ```
@@ -34,3 +36,7 @@ Type :help for a list of available commands or :exit to exit the shell.
 Note that Cypher queries must end with a semicolon.
 neo4j>
 ```
+
+### neo4j-admin
+
+[Neo4j Admin](https://neo4j.com/docs/operations-manual/current/tools/neo4j-admin/) is the primary tool for managing your Neo4j instance. It is a command-line tool that is installed as part of the product and can be executed with a number of commands. Some of the commands are described in more detail in separate sections.
