@@ -1,4 +1,6 @@
 #! /bin/bash
+sleep 15s
+
 echo "
 ALTER CURRENT USER SET PASSWORD FROM 'neo4j' TO 'neo4j123';
 " | cypher-shell -u neo4j  -p neo4j  -d system
