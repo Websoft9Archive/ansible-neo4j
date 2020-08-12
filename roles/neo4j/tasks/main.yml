@@ -19,7 +19,7 @@
     dest: /data/config/neo4j.sh
     
 - name: excute init password
-  script: /data/config/neo4j.sh
+  shell: bash /data/config/neo4j.sh
   
 # print version
 - block:
