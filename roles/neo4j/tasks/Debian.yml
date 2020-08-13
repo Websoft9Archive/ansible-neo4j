@@ -1,10 +1,8 @@
 - name: Add neo4j repository key
-  apt_key:
-    url: https://debian.neo4j.org/neotechnology.gpg.key
-
-- name: Add neo4j repository
-  apt_repository:
-    repo: deb https://debian.neo4j.org/repo stable latest/
+  shell: |
+    wget -O - https://debian.neo4j.com/neotechnology.gpg.key | sudo apt-key add -
+    echo 'deb https://debian.neo4j.com stable latest' | sudo tee -a /etc/apt/sources.list.d/neo4j.list
+    sudo apt-get update
 
 - name: Install neo4j
   apt:
