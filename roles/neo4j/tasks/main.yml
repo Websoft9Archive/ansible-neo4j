@@ -9,18 +9,15 @@
     regexp: '#dbms.connectors.default_listen_address=0.0.0.0'
     line: "dbms.connectors.default_listen_address=0.0.0.0"
     state: present
+    
+- name: excute init password
+  shell: 
+    cmd: bin/neo4j-admin set-initial-password "neo4j"
+    chdir: /usr/share/neo4j/
 
 - name: restart neo4j
   service: name=neo4j state=restarted enabled=yes
 
-- name: Copy init_password
-  template:
-    src: neo4j.sh
-    dest: /data/config/neo4j.sh
-    
-- name: excute init password
-  shell: bash /data/config/neo4j.sh
-  
 # print version
 - block:
   - name: Check Neo4j Version
