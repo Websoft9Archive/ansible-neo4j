@@ -4,7 +4,7 @@
 
 - name: Add neo4j repository
   apt_repository:
-    repo: deb https://debian.neo4j.org/repo stable/
+    repo: deb https://debian.neo4j.org/repo stable latest/
 
 - name: Install neo4j
   apt:
