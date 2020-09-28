@@ -1,0 +1,10 @@
+neo4j_repo_meta:
+  "3.5"
+     RedHat: ""
+     Debian: "3.5"
+  "4.0"
+     RedHat: ""
+     Debian: "4.0"
+  "4.1"
+     RedHat: ""
+     Debian: "4.1"
