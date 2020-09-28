@@ -24,7 +24,7 @@
       '2': '4.0'
       '3': '4.1'
       '4': 'latest'
-    neo4j_version: "{{neo4j_select[neo4j_selection]}}" 
+   neo4j_version: "{{neo4j_select[neo4j_selection]}}" 
 
   roles:
     - { role: role_common, tags: "role_common"}  
