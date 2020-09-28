@@ -10,5 +10,5 @@
 
 - name: Install Neo4j
   yum:
-    name: neo4j
-    state: latest
+    name: neo4j-{{neo4j_version}}
+    
