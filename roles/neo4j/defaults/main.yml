@@ -8,8 +8,8 @@ neo4j_repo_meta:
 
 neo4j_version_meta:
   "3.5":
-     RedHat: "3.5.21"
+     RedHat: "3.5.*"
   "4.0":
-     RedHat: "4.0.8"
+     RedHat: "4.0.*"
   "4.1":
      RedHat: "4.1.*"
