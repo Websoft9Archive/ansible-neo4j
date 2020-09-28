@@ -16,7 +16,18 @@
       3: Neo4j 4.1\n
       private: no
       default: 3
-
+    - name: 'postgresql_selection'
+      prompt: "\nPlease choose the number for PostgreSQL version [ 1/2/3/4/5] \n\n
+      1: PostgreSQL 9.4 (only for Ubuntu)\n
+      2: PostgreSQL 9.5\n
+      3: PostgreSQL 9.6\n
+      4: PostgreSQL 10\n
+      5: PostgreSQL 11\n
+      6: PostgreSQL 12\n
+      7: PostgreSQL 13 (only for Ubuntu)\n"
+      private: no
+      default: 3
+      
   vars:
     postgresql_select:
       '1': '9.4'
