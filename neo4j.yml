@@ -10,7 +10,7 @@
   
   vars_prompt:
     - name: 'neo4j_selection'
-      prompt: "\nPlease choose the number for Neo4j version [ 1/2/3/4] \n\n
+      prompt: "\nPlease choose the number for Neo4j version [ 1/2/3] \n\n
       1: Neo4j 3.5\n
       2: Neo4j 4.0\n
       3: Neo4j 4.1\n"
