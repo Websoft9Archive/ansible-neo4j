@@ -14,7 +14,7 @@
       1: Neo4j 3.5\n
       2: Neo4j 4.0\n
       3: Neo4j 4.1\n
-      3: Neo4j latest\n"
+      4: Neo4j latest\n"
       private: no
       default: 4
 
@@ -24,7 +24,7 @@
       '1': '3.5'
       '2': '4.0'
       '3': '4.1'
-      '3': 'latest'
+      '4': 'latest'
     neo4j_version: "{{neo4j_select[neo4j_selection]}}" 
 
   roles:
