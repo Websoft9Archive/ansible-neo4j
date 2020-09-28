@@ -15,7 +15,7 @@
       2: Neo4j 4.0\n
       3: Neo4j 4.1\n
       private: no
-      default: 3
+      default: 3    
       
   vars:
     neo4j_select:
