@@ -14,7 +14,7 @@
       1: Neo4j 3.5\n
       2: Neo4j 4.0\n
       3: Neo4j 4.1\n
-      3: Neo4j latest\n
+      4: Neo4j latest\n
       private: no
       default: 4
       
