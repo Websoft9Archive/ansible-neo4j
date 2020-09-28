@@ -17,12 +17,12 @@
       private: no
       default: 3
       
-  vars:
-    neo4j_select:
-      '1': '3.5'
-      '2': '4.0'
-      '3': '4.1'
-    neo4j_version: "{{neo4j_select[neo4j_selection]}}" 
+ vars:
+   neo4j_select:
+     '1': '3.5'
+     '2': '4.0'
+     '3': '4.1'
+   neo4j_version: "{{neo4j_select[neo4j_selection]}}" 
 
   roles:
     - { role: role_common, tags: "role_common"}  
