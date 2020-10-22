@@ -17,7 +17,7 @@
     regexp: '#dbms.connector.bolt.listen_address=:7687'
     line: "dbms.connector.bolt.listen_address=0.0.0.0:7687"
     state: present 
-   when: neo4j_version == "3.5"
+  when: neo4j_version == "3.5"
       
 - name: restart neo4j
   service: name=neo4j state=restarted enabled=yes
