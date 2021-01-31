@@ -16,7 +16,9 @@ module.exports = [
     title: '实践指南',
     collapsable: false,
     children: [
-      '/zh/solution-smtp',
+      '/zh/solution-study',
+      '/zh/solution-cli',
+      '/zh/solution-gui',
       '/zh/solution-https',
       '/zh/solution-backup',
       '/zh/solution-upgrade',

@@ -8,21 +8,70 @@
 2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80 和 7876** 端口是否开启
 3. 若想用域名访问 Neo4j，请先到 **域名控制台** 完成一个域名解析
 
-## Neo4j 安装向导
+## Neo4j 验证向导
 
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名* 或 *http://Internet IP*, 默认进入 Neo4j Browser 的连接页面
-![Neo4j Browser](https://libs.websoft9.com/Websoft9/DocsPicture/en/neo4j/neo4j-connectfirst-websoft9.png)
+1. 使用 **SSH** 客户端连接 Neo4j 所在的服务器，输入 `cypher-shell` 命令，并登录（[不知道密码？](/zh/stack-accounts.md)）
+   ```
+   $cypher-shell
+   username: neo4j
+   password: *****
+   Connected to Neo4j 4.1.0 at neo4j://localhost:7687 as user neo4j.
+   Type :help for a list of available commands or :exit to exit the shell.
+   Note that Cypher queries must end with a semicolon.
+   neo4j@neo4j>
+   ```
+2. 输入命令 `CALL dbms.showCurrentUser();` 查看当前的数据库可用性，验证可用性
+   ```
+   neo4j@neo4j> CALL dbms.showCurrentUser();
+   +--------------------------+
+   | username | roles | flags |
+   +--------------------------+
+   | "neo4j"  | admin  | []    |
+   +--------------------------+
+   1 row available after 22 ms, consumed after another 1 ms
+   ```
+3. 输入命令 `CREATE DATABASE customers`，创建一个名称为 customers 的 database
 
-2. 输入[默认用户名和密码](/zh/stack-accounts.md)后，系统会强制要求修改密码
-![修改Neo4j密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/neo4j/neo4j-snewpw-websoft9.png)
-
-4. 修改新密码后，系统登录到控制台，初始化安装完成
-![Neo4j 控制台](https://libs.websoft9.com/Websoft9/DocsPicture/en/neo4j/neo4j-ssui-websoft9.png)
-
-5. 通过:【Database Information】>【server user add】 增加新用户
-![Neo4j 增加用户](https://libs.websoft9.com/Websoft9/DocsPicture/en/neo4j/neo4j-adduser-websoft9.png)
+4. 验证图形化管理工具 Neo4j Browser（[参考](/zh/solution-gui.md#neo4j-browser)）
+   ![Neo4j Browser](https://libs.websoft9.com/Websoft9/DocsPicture/en/neo4j/neo4j-connectfirst-websoft9.png)
 
 > 需要了解更多 Neo4j 的使用，请参考官方文档：[Neo4j Documentation](https://neo4j.com/docs/)
+
+## Neo4j 入门向导
+
+下面以 Neo4j Browser 作为学习工具，完整的让大家快速使用 Neo4j 创建数据和分析数据：
+
+### 自建数据并分析
+
+1. 登录 Neo4j Browser，运行下面的命令录入三条节点数据
+   ```
+   create (n:Person { name: 'Tom Hanks', born: 1956 }) return n;
+   create (n:Person { name: 'Robert Zemeckis', born: 1951 }) return n;
+   create (n:Movie { title: 'Forrest Gump', released: 1951 }) return n;
+   ```
+   ![Neo4j 增加数据](https://libs.websoft9.com/Websoft9/DocsPicture/zh/neo4j/neo4j-inputnodedata001-websoft9.png)
+
+3. 运行查询所有节点数据的命令，便可以看到图形化展示出的数据
+   ```
+   match(n) return n;
+   ```
+   ![Neo4j 增加数据](https://libs.websoft9.com/Websoft9/DocsPicture/zh/neo4j/neo4j-inputnodedata002-websoft9.png)
+
+4. 接下来运行下面的命令，给节点创建关系
+   ```
+   MATCH (a:Person),(b:Movie)
+   WHERE a.name = 'Robert Zemeckis' AND b.title = 'Forrest Gump'
+   CREATE (a)-[r:DIRECTED]->(b)
+   RETURN r;
+   ```
+5. 再次运行查询节点数据的命令 `match(n) return n;`
+   ![Neo4j 增加数据](https://libs.websoft9.com/Websoft9/DocsPicture/zh/neo4j/neo4j-inputnodedata003-websoft9.png)
+
+
+### 导入数据进行分析
+
+参考：[KGData 行业图谱数据](https://github.com/muniao/KGData)
+
 
 ## 常见问题
 

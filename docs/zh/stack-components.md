@@ -39,6 +39,8 @@ Nginx 日志文件： */var/log/nginx/*
 | HTTPS | 443 | 通过https访问 Neo4j Browser| 可选 |
 | Neo4j | 7687 | Neo4j Browser 远程连接 Neo4j database | 可选 |
 
+Neo4j 使用中可能需要用到更多的端口，详情参考官方文档：[Port on Configuration file](https://neo4j.com/docs/operations-manual/current/configuration/ports/)
+
 ## 版本号
 
 组件版本号可以通过云市场商品页面查看。但部署到您的服务器之后，组件会自动进行更新导致版本号有一定的变化，故精准的版本号请通过在服务器上运行命令查看：

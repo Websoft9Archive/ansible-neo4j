@@ -1,8 +1,8 @@
 # SSL/HTTPS
 
-网站完成域名绑定且可以通过HTTP访问之后，方可设置HTTPS。
+HTTPS 是 [Neo4j 安全](https://neo4j.com/docs/operations-manual/current/security/)管理的一部分，完全域名绑定且可以通过 HTTP 访问之后，方可设置HTTPS。
 
-Neo4j预装包，已安装Web服务器 SSL 模块和公共免费证书方案 [Let's Encrypt](https://letsencrypt.org/) ，并完成预配置。
+Neo4j 预装包，已安装Web服务器 SSL 模块和公共免费证书方案 [Let's Encrypt](https://letsencrypt.org/) ，并完成预配置。
 
 > 除了虚拟主机配置文件之外，HTTPS设置无需修改Nginx任何文件
 

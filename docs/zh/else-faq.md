@@ -4,9 +4,21 @@
 
 支持多语言（包含中文），系统默认根据浏览器自动选择语言 
 
+#### 社区版 vs 企业版？
+
+参考：[Neo4j 功能细节对比](https://neo4j.com/docs/operations-manual/current/introduction/#edition-details)
+
 #### Neo4j browser 是什么？
 
 Neo4j浏览器是一个可以通过Web浏览器运行的图形用户界面（GUI）。 Neo4j浏览器可用于添加数据，运行查询，创建关系等。 它还提供了一种可视化数据库中数据的简便方法。
+
+#### Neo4j 一个实例支持多个数据库吗？
+
+支持，但社区版仅支持一个默认的系统库和用户库
+
+#### Neo4j 有行和列的概念吗？
+
+有，但存储的是数据节点以及节点之间的关系
 
 #### Cypher 是什么？
 

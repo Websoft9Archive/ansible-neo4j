@@ -21,22 +21,48 @@ Neo4j 域名绑定操作步骤：
 3. 保存配置文件，重启[Nginx服务](/zh/admin-services.md#nginx)
 
 
-## CLI
+## 重置密码
 
-### Cypher Shell
+常用的 Neo4j 重置密码相关的操作主要有修改密码和找回密码两种类型：
 
-Neo4j 提供了默认的命令行工具[Cypher Shell](https://neo4j.com/docs/operations-manual/current/tools/cypher-shell/)，Cypher Shell用于运行查询和执行管理任务。它通过加密的二进制协议Bolt进行通信。
+### 修改密码
+
+修改密码只需登录服务器后运行一条命令即可：  
+
+下面的示例是将旧密码`neo4j`更改为新密码`neo4j123`：
+
 
 ```
-root@neo4j-test:~# cypher-shell
-username: neo4j
-password: *****
-Connected to Neo4j 3.5.14 at bolt://localhost:7687 as user neo4j.
-Type :help for a list of available commands or :exit to exit the shell.
-Note that Cypher queries must end with a semicolon.
-neo4j>
+echo "
+ALTER CURRENT USER SET PASSWORD FROM 'neo4j' TO 'neo4j123';
+" | cypher-shell -u neo4j  -p neo4j  -d system
 ```
 
-### neo4j-admin
+系统也支持在 Neo4j Browser 中修改密码。
 
-[Neo4j Admin](https://neo4j.com/docs/operations-manual/current/tools/neo4j-admin/) is the primary tool for managing your Neo4j instance. It is a command-line tool that is installed as part of the product and can be executed with a number of commands. Some of the commands are described in more detail in separate sections.
+### 找回密码
+
+如果用户忘记了密码，通过配置文件临时去掉验证，然后设置密码，再复原的方法找回密码：
+
+1. 停止 Neo4j
+   ```
+   sudo systemctl stop neo4j
+   ```
+
+2. 修改 [Neo4j 的配置文件](/zh/stack-components.md#neo4j)，将`#dbms.security.auth_enabled=false` 改成
+   ```
+   dbms.security.auth_enabled=false
+   ```
+3. 重新启动 Neo4j 服务后，开始修改密码
+   ```
+   sudo systemctl start neo4j
+   cypher-shell -d system
+   
+   neo@system> ALTER USER neo4j SET PASSWORD 'mynewpass';
+   neo@system> :exit
+   ```
+
+4. 复原配置文件
+5. 重启 Neo4j 服务
+
+以上方案来自官方文档：[Password and user recovery](https://neo4j.com/docs/operations-manual/current/configuration/password-and-user-recovery/)
