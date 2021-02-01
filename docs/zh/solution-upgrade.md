@@ -21,7 +21,25 @@ yum update -y
 ```
 > 本部署包已预配置一个用于自动更新的计划任务。如果希望去掉自动更新，请删除对应的Cron
 
+以上命令支持对 Neo4j Patch 升级，类似：Neo4j 4.0.0 to Neo4j 4.0.1。
 
-## Neo4j升级
+## Neo4j 升级
 
 Neo4j 升级有一定的复杂性，请参考[官方升级文档](https://neo4j.com/docs/operations-manual/current/upgrade/)
+
+升级对象一般指的是：Neo4j 4.1.2 to Neo4j 4.2.0，下面说明主要步骤：
+
+1. 停止 Neo4j 服务之后，安装指定的版本
+    ```
+    sudo systemctl stop neo4j
+    sudo apt-get update
+    sudo sudo apt-get install neo4j=1:4.2.2
+    ```
+2. 修改 Neo4j 配置文件，取消 `dbms.allow_upgrade=true` 前面的 # 号
+
+3. 运行 Neo4j 启动服务的命令
+    ```
+    sudo systemctl start neo4j
+    ```
+4. 系统升级开始
+5. 升级完成之后，恢复 `dbms.allow_upgrade=true`之前的 # 号

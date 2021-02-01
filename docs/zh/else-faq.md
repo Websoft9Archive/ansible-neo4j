@@ -8,6 +8,10 @@
 
 参考：[Neo4j 功能细节对比](https://neo4j.com/docs/operations-manual/current/introduction/#edition-details)
 
+#### Neo4j 支持哪些连接协议？
+
+Neo4j 支持三种不同的连接方式：Bolt、HTTP、HTTPS。
+
 #### Neo4j browser 是什么？
 
 Neo4j浏览器是一个可以通过Web浏览器运行的图形用户界面（GUI）。 Neo4j浏览器可用于添加数据，运行查询，创建关系等。 它还提供了一种可视化数据库中数据的简便方法。

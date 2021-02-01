@@ -41,6 +41,24 @@
 
 下面以 Neo4j Browser 作为学习工具，完整的让大家快速使用 Neo4j 创建数据和分析数据：
 
+### 用范例数据分析
+
+控制台提供了一个经典范例 **Movie Graph**，根据范例提供的向导可以完成如下动作：
+
+* 创建：将电影数据插入图形
+* 查找：检索单个电影和演员
+* 查询：发现相关的演员和导演
+* 解决：分析某个演员的**六度空间**关系
+
+1. 登录 Neo4j Browser
+2. 打开：【Sample Scripts】>【Example Graphs】>【Movie Graph】，点击2/8页下的【Create】图标 
+   ![Neo4j 使用范例数据](https://libs.websoft9.com/Websoft9/DocsPicture/zh/neo4j/neo4j-sampleonline001-websoft9.png)
+
+3. 立即可见已经建立了关系的数据
+   ![Neo4j 使用范例数据](https://libs.websoft9.com/Websoft9/DocsPicture/zh/neo4j/neo4j-sampleonline002-websoft9.png)
+
+4. 根据向导依次完成后续的页面中的范例
+
 ### 自建数据并分析
 
 1. 登录 Neo4j Browser，运行下面的命令录入三条节点数据
@@ -81,4 +99,8 @@
 
 #### 能够访问 Neo4j Browser，但是连接数据库报错？
 
-您的服务器对应的安全组7876端口没有开启（入规则），导致无法连接数据库
+您的服务器对应的安全组 7876 端口没有开启（入规则），导致无法连接数据库
+
+#### 为什么 Neo4j Browser 中 Roles 显示为空？
+
+Neo4j 社区版不支持 Roles，故显示为空。

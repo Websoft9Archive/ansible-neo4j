@@ -2,6 +2,19 @@
 
 下面每一个方案，都经过实践证明行之有效，希望能够对你有帮助
 
+## 用户管理
+
+Neo4j 提供了详细的用户管理和角色管理功能（仅企业版支持）
+
+```
+# 显示所有用户
+SHOW USERS;
+
+# 创建新用户
+```
+
+详情参考官网文档：[User and role management](https://neo4j.com/docs/cypher-manual/current/administration/security/users-and-roles/#administration-security-users)
+
 ## 域名绑定
 
 绑定域名的前置条件是：Neo4j Browser已经可以通过解析后的域名访问。  
@@ -37,8 +50,6 @@ echo "
 ALTER CURRENT USER SET PASSWORD FROM 'neo4j' TO 'neo4j123';
 " | cypher-shell -u neo4j  -p neo4j  -d system
 ```
-
-系统也支持在 Neo4j Browser 中修改密码。
 
 ### 找回密码
 

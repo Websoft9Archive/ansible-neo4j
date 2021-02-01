@@ -103,23 +103,7 @@ Neo4j 是基于 Java 开发，因此运行它需要预先安装 JDK。
 
 ## CLI
 
-### Cypher Shell
-
-Neo4j 提供了默认的命令行工具[Cypher Shell](https://neo4j.com/docs/operations-manual/current/tools/cypher-shell/)，Cypher Shell用于运行查询和执行管理任务。它通过加密的二进制协议Bolt进行通信。
-
-```
-root@neo4j-test:~# cypher-shell
-username: neo4j
-password: *****
-Connected to Neo4j 3.5.14 at bolt://localhost:7687 as user neo4j.
-Type :help for a list of available commands or :exit to exit the shell.
-Note that Cypher queries must end with a semicolon.
-neo4j>
-```
-
-### neo4j-admin
-
-[Neo4j Admin](https://neo4j.com/docs/operations-manual/current/tools/neo4j-admin/) is the primary tool for managing your Neo4j instance. It is a command-line tool that is installed as part of the product and can be executed with a number of commands. Some of the commands are described in more detail in separate sections.
+Neo4j 通过了一系列的命令行工具，用于管理服务、导入数据、分析数据，详情参考：[Neo4j Tools](https://neo4j.com/docs/operations-manual/current/tools/)
 
 ## 集群
 
