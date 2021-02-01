@@ -6,6 +6,8 @@
 
 - src: https://github.com/websoft9dev/role_jdk
 
+- src: https://github.com/websoft9dev/role_neo4j
+
 - src: https://github.com/websoft9dev/role_init
 
 - src: https://github.com/websoft9dev/role_preend

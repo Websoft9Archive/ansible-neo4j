@@ -1,6 +1,4 @@
-# 核心任务
-
-- name: neo4j
+- name: Neo4j
   hosts: all
   become: yes
   become_method: sudo
@@ -30,7 +28,7 @@
     - { role: role_cloud, tags: "role_cloud"} 
     - { role: role_jdk, tags: "role_jdk"}
     - { role: role_nginx, tags: "role_nginx"}
-    - { role: neo4j, tags: "neo4j"}
+    - { role: role_neo4j, tags: "role_neo4j"}
     - { role: role_init, tags: "role_init"}
     - { role: role_preend, tags: "role_preend"}
     - { role: role_end, tags: "role_end"}
