@@ -20,7 +20,7 @@
    Note that Cypher queries must end with a semicolon.
    neo4j@neo4j>
    ```
-2. 输入命令 `CALL dbms.showCurrentUser();` 查看当前的数据库可用性，验证可用性
+2. 输入命令 `CALL dbms.showCurrentUser();` 查看当前用户
    ```
    neo4j@neo4j> CALL dbms.showCurrentUser();
    +--------------------------+
@@ -30,10 +30,9 @@
    +--------------------------+
    1 row available after 22 ms, consumed after another 1 ms
    ```
-3. 输入命令 `CREATE DATABASE customers`，创建一个名称为 customers 的 database
 
-4. 验证图形化管理工具 Neo4j Browser（[参考](/zh/solution-gui.md#neo4j-browser)）
-   ![Neo4j Browser](https://libs.websoft9.com/Websoft9/DocsPicture/en/neo4j/neo4j-connectfirst-websoft9.png)
+3. 验证图形化管理工具 Neo4j Browser（[参考](/zh/solution-gui.md#neo4j-browser)）
+   ![Neo4j Browser](https://libs.websoft9.com/Websoft9/DocsPicture/zh/neo4j/neo4j-connectfirst-websoft9.png)
 
 > 需要了解更多 Neo4j 的使用，请参考官方文档：[Neo4j Documentation](https://neo4j.com/docs/)
 

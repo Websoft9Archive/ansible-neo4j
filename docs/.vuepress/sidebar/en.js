@@ -15,8 +15,9 @@ module.exports = [
         title: 'Best Practices',
         collapsable: false,
         children: [
+          '/solution-study',
           '/solution-cli',
-          '/solution-smtp',
+          '/solution-gui',
           '/solution-https',
           '/solution-backup',
           '/solution-upgrade',

@@ -1,28 +1,27 @@
 # Troubleshooting
 
-We collect the most common troubleshooting of using Neo4j for your reference:
+If you're having trouble with running Neo4j, here is a quick guide to solve most common problems.
 
-## Database related
+> Most faults about the Instance is closely related to the Instance provider, Cloud Platform. Provided you're sure the fault is caused by Cloud Platform, refer to [Cloud Platform Documentation](https://support.websoft9.com/docs/faq/tech-instance.html).
 
-#### Database service could not be started?
+#### How can I check the error logs?
 
-Insufficient disk space, insufficient memory, and configuration file errors can make database service could not be started  
+You can find the keywords **Failed** or **error** from the logs directory: `/data/logs`
+
+#### Can't start Neo4j service?
+
+Insufficient disk space and memory, incorrect configuration file may cause the failure to start the service. 
 
 It is recommended to first check through the command.
 
 ```shell
+# restart Neo4j service
+sudo systemctl status neo4j
+sudo journalctl -u neo4j
+
 # view disk space
 df -lh
 
 # view memory rate
 free -lh
 ```
-
-## Instance related
-
-Instance troubleshooting is closely related to the Instance provider that is Cloud Platform   
-Please refer to [Cloud Platform Documentation](https://support.websoft9.com/docs/faq/tech-instance.html)
-
-## Network related
-
-## Other

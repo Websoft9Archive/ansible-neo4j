@@ -1,5 +1,17 @@
 # FAQ
 
+#### Neo4j support multiply languages?
+
+Yes
+
+#### Neo4j Community Edition vs Neo4j Enterprise Edition?
+
+Please refer to [Neo4j edition details](https://neo4j.com/docs/operations-manual/current/introduction/#edition-details)
+
+#### How many connection protocol on Neo4j?
+
+Bolt, HTTP, HTTPS
+
 #### What's Neo4j Browser? 
 
 The Neo4j browser is a graphical user interface (GUI) that can be run through a web browser. The Neo4j browser can be used for adding data, running queries, creating relationships, and more. It also provides an easy way to visualise the data in the database.
@@ -8,9 +20,17 @@ The Neo4j browser is a graphical user interface (GUI) that can be run through a 
 
 Cypher is Neo4j’s graph query language that allows users to store and retrieve data from the graph database. Neo4j wanted to make querying graph data easy to learn, understand, and use for everyone, but also incorporate the power and functionality of other standard data access languages.
 
+#### One Neo4j instance support multiply databases?
+
+Yes, but only for Neo4j Enterprise Edition
+
+#### Is there have line and column for Neo4j?
+
+Yes, but it storage for relationship of Node
+
 #### If there is no domain name, can I deploy Neo4j?
 
-Yes, visit Neo4j by *http://Internet IP*
+Yes, visit Neo4j by *http://Server's Internet IP*
 
 #### Is there a web-base GUI database management tools?
 

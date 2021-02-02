@@ -1,61 +1,77 @@
-# Neo4j 自动化安装与部署
+# Neo4j Cloud Installer
 
-本项目是由 [Websoft9](http://www.websoft9.com) 研发的 [Neo4j](https://neo4j.com) 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 Neo4j，让原本复杂的安装过程变得没有任何技术门槛。  
+![](https://libs.websoft9.com/common/websott9-cloud-installer.png) 
 
-本项目是开源项目，采用 LGPL3.0 开源协议。
+## Introduction
 
-## 配置要求
+[English](/README.md) | [简体中文](/README-zh.md)  
 
-安装本项目，确保符合如下的条件：
+**Neo4j Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [Apache Neo4j](https://neo4j.com) based on Ansible and shell. It helps user install Neo4j and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
 
-| 条件       | 详情       | 备注  |
-| ------------ | ------------ | ----- |
-| 操作系统       | Ubuntu18.04,CentOS7.x,AmazonLinux2      |  可选  |
-| 公有云| AWS, Azure, 阿里云, 华为云, 腾讯云 | 可选 |
-| 私有云|  KVM, VMware, VirtualBox, OpenStack | 可选 |
-| 服务器配置 | 最低2核4G，安装时所需的带宽不低于10M |  建议采用按量100M带宽 |
+## System Requirement
 
-更多请参考官方 [System requirements](https://neo4j.com/docs/operations-manual/current/installation/requirements/)
+System Requirement to install this repository are as following：
 
-## 组件
+| Conditions       | Details                               | Notes                |
+| ------------------- | --------------------------------| -------------------- |
+| Operating System   | CentOS7.x, Ubuntu18.04, Amazon Linux2 | Optional                 |
+| Public Cloud     | AWS, Azure, Alibaba Cloud, HUAWEI ClOUD, Tencent Cloud    | Optional                 |
+| Private Cloud     | KVM, VMware, VirtualBox, OpenStack    | Optional                 |
+| Server Configuration | vCPU no less than 1 core, Memory no less than  2 GIB, Storage no less than 10 GB, Bandwidth no less than 100M ||
 
-包含的核心组件为：Neo4j Server, Java, Nginx
+To learn more information, please view [Installation & Configuration](https://neo4j.com/docs/operations-manual/current/installation/requirements/).
 
-更多请见[参数表](/docs/zh/stack-components.md)
+## Ecosystem
 
-## 本项目安装的是 Neo4j 最新版吗？
+Core components of this repository: Apache Neo4j, Nginx, PostgreSQL, Docker, phpPgAdmin on docker
 
-本项目采用官方提供的在线 deb/rpm 安装包，Neo4j 官方会定期维护Neo4j 的版本，即每一次安装均可保证为 Neo4j 官方发布的最新稳定版([查看版本号](https://neo4j.com/download-center/#community))。
+Learn more about [Parameters](/docs/stack-components.md).
 
-我们会定期检查安装脚本 URL 地址的准确性，以保证用户可以顺利安装。
+## Installation
 
-## 安装指南
+You can install it by thi Cloud Installer solution all in one. In addition, you can deploy image published on major Cloud Platform by Websoft9.
 
-以 root 用户登录 Linux，运行下面的**一键自动化安装命令**即可启动自动化部署。若没有 root 用户，请以其他用户登录 Linux 后运行 `sudo su -` 命令提升为 root 权限，然后再运行下面的脚本。
+#### All-in-one Installer
+
+Run the automatic installation script with **root** authority to start the installation. If necessary, users need to make interactive choices, and then wait patiently until the installation is successful.
 
 ```
-wget -N https://raw.githubusercontent.com/Websoft9/ansible-linux/main/scripts/install.sh; bash install.sh -r neo4j
+$ sudo su -
+$ wget -N https://raw.githubusercontent.com/Websoft9/ansible-linux/main/scripts/install.sh; bash install.sh -r neo4j
 ```
 
-脚本后启动，就开始了自动化安装，必要时需要用户做出交互式选择，然后耐心等待直至安装成功。
+If the network is broken or blocked, SSH will be interrupted and the installation will fail. Please reinstall.
 
-**安装中的注意事项：**  
+#### Image on Cloud 
 
-1. 操作不慎或网络发生变化，可能会导致SSH连接被中断，安装就会失败，此时请重新安装
-2. 安装缓慢、停滞不前或无故中断，主要是网络不通（或网速太慢）导致的下载问题，此时请重新安装
+Follow our [Neo4j image](https://apps.websoft9.com/neo4j) for installation on major Cloud Platform.
 
-多种原因导致无法顺利安装，请使用我们在公有云上发布的 [Neo4j 镜像](https://apps.websoft9.com/neo4j) 的部署方式
+## Documentation
+
+To get information about initial installation, default username and password, HTTPS, SMTP, Backup, Upgrade and more, please view **Graylog Administrator Guide** ([English](https://support.websoft9.com/docs/neo4j) | [简体中文](https://support.websoft9.com/docs/neo4j/zh))
+
+## Changelog
+
+Detailed changes are documented in the [CHANGELOG](/CHANGELOG.md).
 
 ## License
 
 [LGPL-3.0](/License.md), Additional Terms: It is not allowed to publish free or paid image based on this repository in any Cloud platform's Marketplace.
+
 Copyright (c) 2016-present, Websoft9
 
-## 文档
-
-文档链接：https://support.websoft9.com/docs/neo4j/zh
+This program provided by Websoft9 contains a series of software with separate copyright notices and license terms. Your use of the source code for the software included is subject to the terms and conditions of its own license.
 
 ## FAQ
 
-- 命令脚本部署与镜像部署有什么区别？请参考[镜像部署-vs-脚本部署](https://support.websoft9.com/docs/faq/zh/bz-product.html#镜像部署-vs-脚本部署)
-- 本项目支持在 Ansible Tower 上运行吗？支持
+#### Can I run this repository on Ansible Tower? 
+
+Yes.
+
+#### How to install and view the latest release?
+
+You can install the latest release by default, nothing to do
+
+#### Is the default password safe?
+
+Neo4j Cloud Installer use the random password solution, every installation have different password, that mean your password is different from other users
