@@ -15,6 +15,18 @@ SHOW USERS;
 # Create new user
 ```
 
+```
+# Show all users
+SHOW USERS;
+CALL dbms.security.listUsers();
+
+# Create new user, the third parameter is requridchangepassword 
+CALL dbms.security.createUser('username','password',false);
+
+# Delete user
+CALL dbms.security.deleteUser('username');   
+```
+
 ## Domain binding
 
 The precondition for binding a domain is that Neo4j can accessed by domain name.

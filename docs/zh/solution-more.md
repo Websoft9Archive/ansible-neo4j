@@ -9,8 +9,13 @@ Neo4j 提供了详细的用户管理和角色管理功能（仅企业版支持�
 ```
 # 显示所有用户
 SHOW USERS;
+CALL dbms.security.listUsers();
 
-# 创建新用户
+# 创建新用户，第三个参数表示 requridchangepassword 
+CALL dbms.security.createUser('username','password',false);
+
+# 删除用户
+CALL dbms.security.deleteUser('username');   
 ```
 
 详情参考官网文档：[User and role management](https://neo4j.com/docs/cypher-manual/current/administration/security/users-and-roles/#administration-security-users)
