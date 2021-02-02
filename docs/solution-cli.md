@@ -1,5 +1,7 @@
 # CLI
 
+## Cypher Shell
+
 [Cypher Shell](https://neo4j.com/docs/operations-manual/current/tools/cypher-shell/) is a command-line tool that comes with the Neo4j installation. Cypher Shell is used to run queries and perform administrative tasks. It communicates via the encrypted binary protocol Bolt.
 
 ```
