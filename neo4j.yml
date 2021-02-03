@@ -33,6 +33,9 @@
    - set_fact:
        jdk_version: "8" 
      when: neo4j_version == "3.4"
+   
+   - debug:
+       msg: neo4j version is {{neo4j_version}}, jdk version is {{jdk_version}}
 
   roles:
     - { role: role_common, tags: "role_common"}  
