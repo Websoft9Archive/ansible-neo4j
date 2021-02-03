@@ -31,7 +31,7 @@
   
   pre_tasks:
    - set_fact:
-        jdk_version: "8" 
+       jdk_version: "8" 
      when: neo4j_version == "3.4"
 
   roles:
