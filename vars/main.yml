@@ -12,3 +12,5 @@ init_db:
   neo4j:
     admin: neo4j
     password: "neo4j"
+    commands:
+      - sudo systemctl restart nginx
