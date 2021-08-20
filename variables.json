@@ -1,0 +1,18 @@
+{
+  "name": "neo4j",
+  "trademark": "Neo4j",
+  "official_url": "https://neo4j.com/",
+  "support_os": "CentOS7.x, Ubuntu20.04, Amazon Linux2",
+  "requirements_cpu": "2",
+  "requirements_memory": "4",
+  "requirements_Bandwidth": "100",
+  "requirements_disk": "20",
+  "requirements_swap": "2",
+  "requirements_configure_url": "https://www.neo4j.com/download.html",
+  "components": "Neo4j Server, Neo4j Browser, Java, Nginx",
+  "install_way": {
+    "en": "Package isntallation",
+    "zh": "包安装"
+  },
+  "install_url": "https://neo4j.com/download-center/#community"
+}
