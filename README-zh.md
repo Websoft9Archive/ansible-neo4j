@@ -16,7 +16,7 @@
 | 私有云|  KVM, VMware, VirtualBox, OpenStack | 可选 |
 | 服务器配置 | 最低2核4G，存储20GB以上，Swap分区2GB以上 |  建议采用按量100M带宽 |
 
-更多请见： [官方 System requirement](https://www.neo4j.com/download.html)。
+更多请见： [官方 System requirement](https://neo4j.com/docs/operations-manual/current/installation/requirements/)。
 
 ## 组件
 
