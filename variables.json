@@ -8,7 +8,7 @@
   "requirements_Bandwidth": "100",
   "requirements_disk": "20",
   "requirements_swap": "2",
-  "requirements_configure_url": "https://www.neo4j.com/download.html",
+  "requirements_configure_url": "https://neo4j.com/docs/operations-manual/current/installation/requirements/",
   "components": "Neo4j Server, Neo4j Browser, Java, Nginx",
   "install_way": {
     "en": "Package isntallation",
