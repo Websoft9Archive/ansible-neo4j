@@ -6,7 +6,7 @@ Neo4j have some useful GUI tools, include web-based and desktop, support Windows
 
 Before use GUI tool, you should prepare something for it
 
-1. Check **[Inbound of Security Group Rule](https://support.websoft9.com/docs/faq/tech-instance.html)** of Cloud Console to ensure the 7867 allowed
+1. Check **[Inbound of Security Group Rule](https://support.websoft9.com/docs/faq/tech-instance.html)** of Cloud Console to ensure the 7687 allowed
 
 2. Check [Neo4j configuration file](/stack-components.md#neo4j) have accept all IP connection(0.0.0.0 mean allowed)
    ```
