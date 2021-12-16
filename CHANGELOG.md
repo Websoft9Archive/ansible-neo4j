@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Release Neo4j v4.4.0-1  2021-12-07
+### Fixes
+- update to v4.4.0-1 
+
 ## Release Neo4j v4.3-1  2021-8-23
 ### Fixes
 - update to Neo4j4.3 
