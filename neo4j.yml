@@ -13,8 +13,9 @@
       2: Neo4j 3.5\n
       3: Neo4j 4.0\n
       4: Neo4j 4.1\n
-      5: Neo4j 4.3\n
-      6: Neo4j latest\n"
+      5: Neo4j 4.2\n
+      6: Neo4j 4.3\n
+      7: Neo4j latest\n"
       private: no
       default: 4
 
@@ -25,8 +26,9 @@
       '2': '3.5'
       '3': '4.0'
       '4': '4.1'
-      '5': '4.3'
-      '6': 'latest'
+      '5': '4.2'
+      '6': '4.3'
+      '7': 'latest'
     neo4j_version: "{{neo4j_select[neo4j_selection]}}" 
   
   pre_tasks:
